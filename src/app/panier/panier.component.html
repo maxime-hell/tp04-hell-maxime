@@ -1,0 +1,5 @@
+<p>panier works!</p>
+
+<div *ngFor="let c of liste$ | async">
+  {{ c.nom }} <button (click)="delArticle(c)">Sup</button>
+</div>

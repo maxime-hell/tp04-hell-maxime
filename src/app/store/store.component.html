@@ -1,0 +1,16 @@
+<p>store works!</p>
+
+<form [formGroup]="articleForm">
+  <label>Nom : <input type="text" formControlName="nom" /></label>
+  <br />
+  <label>Prix : <input type="number" formControlName="prix" /></label>
+  <br />
+
+  <label>Id : <input type="number" formControlName="id" /></label>
+  <br />
+
+  <button (click)="addArticle()">Ajouter</button>
+</form>
+
+<br />
+<app-panier></app-panier>

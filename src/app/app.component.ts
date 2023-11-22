@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
+import { Select } from '@ngxs/store';
+import { Observable } from 'rxjs-compat/observable';
+import { ArticleState } from 'src/shared/states/article-state';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tp04-hell-Maxime';
+
+  @Select(ArticleState.getNbArticles) nb$!: Observable<number>;
+  constructor() {}
 }
